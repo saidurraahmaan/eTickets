@@ -11,11 +11,13 @@
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-12">
-                        <div class="card-header text-white bg-dark">
+                        <div class="card-header text-white bg-info">
                             <p class="card-text">
                                 <h5 class="card-title">
                                     @item.Name
-                                 
+
+                                    <a class="text-white float-right" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
+
                                 </h5>
                             </p>
                         </div>
@@ -68,3 +70,5 @@
         </div>
     }
 </div>
+
+@await Html.PartialAsync("_CreateItem", "Movies") 
